@@ -1,0 +1,23 @@
+<%- include('header') -%>
+    <div class="box" id="heading">
+        <h1><%= listTitle %></h1>
+    </div>
+    <div class="box">
+       
+        <% for(item of items) {%>
+            <% if(item){%>
+                <div class="item">
+                    <input type="checkbox">
+                    <p><%= item %></p>
+                </div>
+            <% }%>
+        <% }%>  
+        
+        <form class="item" action="/" method="POST">
+            <input type="text" name="todo" placeholder="Add TODO..." autocomplete="off">
+            <button type="submit" name="list" value=<%= listTitle %>>+</button>
+        </form>
+    </div>
+<%- include('footer') -%>    
+   
+    
